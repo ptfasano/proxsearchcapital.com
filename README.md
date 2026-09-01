@@ -29,6 +29,8 @@ css/tokens.css   Brand tokens (colors, type, spacing) — from the Feb 2025 bran
 css/site.css     All site styles, composed from those tokens
 js/site.js       Mobile nav toggle. That is the only script.
 assets/logos/    Primary, stacked, and brandmark lockups in color / black / white
+                 favicon-16/32/48.png, apple-touch-icon.png, prox-brandmark-1.png
+favicon.ico      Multi-size (16/32/48) icon at the site root
 assets/elements/ Focus frame and crosshair SVGs from the brand system
 assets/img/      Photography, resized to max 1800px and re-encoded at quality 82
 ```
@@ -142,3 +144,19 @@ powershell -ExecutionPolicy Bypass -File serve.ps1
 ```
 
 Serves the folder at http://localhost:8123.
+
+## Favicon
+
+Generated from `PROX Brandmark-1.png` in the Logo Suite on the shared drive
+(465x465, transparent, `#0B6756`). The script trims to the mark's opaque
+bounding box, then re-pads evenly, so the sizes are optically consistent
+rather than inheriting the source file's own margin.
+
+- `favicon.ico` at the root, 16/32/48 in one file, for the request browsers
+  make before they parse the HTML.
+- `favicon-16.png` / `favicon-32.png` linked in the head.
+- `apple-touch-icon.png` at 180x180 on a **white** ground with wider padding.
+  iOS composites transparency onto black, so a transparent version would show
+  a dark green mark on black.
+
+Regenerate with `favicon.ps1` and `makeico.ps1` if the source mark changes.
