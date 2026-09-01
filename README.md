@@ -57,6 +57,12 @@ The footer sits on `#0F1613` with a 3px green rule above it, so it separates fro
 green CTA most pages close on. Its links use `#42CFA6`, the tint the brand specifies
 for dark grounds.
 
+The site is light-only. `tokens.css` carries a dark-mode block that flips the ink
+and ground tokens; `site.css` overrides it back under `prefers-color-scheme: dark`,
+and every page sends `<meta name="color-scheme" content="light">` plus
+`color-scheme: only light` so phones do not force-darken it. Without both, body
+text went near-white on a white ground and vanished.
+
 House style: **no em dashes in sentence copy.** Use a comma, a colon, or a second
 sentence. The only remaining em dashes are the ` — ` separators in `<title>` tags.
 

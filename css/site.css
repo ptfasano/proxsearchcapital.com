@@ -772,3 +772,29 @@ h2            { font-size: clamp(1.875rem, 3.4vw, 2.75rem); }
 @media (max-width: 640px) {
   .site-footer__top { grid-template-columns: 1fr; gap: var(--prox-6); }
 }
+
+/* --- Opt out of forced dark mode -------------------------------------------
+   Chrome on Android (Auto Dark Theme) and some in-app browsers invert pages
+   that do not declare a scheme, which turned the white ground dark and left
+   near-black text on it. "only light" opts the whole document out. Paired
+   with <meta name="color-scheme" content="light"> in the head. */
+:root { color-scheme: only light; }
+html { background: #fff; }
+body { background: #fff; }
+
+/* tokens.css ships a dark-mode block that flips --prox-ink to #E8EAEA and
+   --prox-bg to #0F1613. This site paints its own light grounds, so on a phone
+   with dark mode on the ground stayed white while the body text went
+   near-white and disappeared. The site is light-only; hold the light values.
+   color-scheme above stops the browser force-darkening; this stops our own
+   tokens from doing it. */
+@media (prefers-color-scheme: dark) {
+  :root, :root:not([data-theme="light"]) {
+    --prox-bg:      #FFFFFF;
+    --prox-surface: #F2F3F3;
+    --prox-ink:     #101614;
+    --prox-rule:    #E8EAEA;
+    --prox-link:    #0B6756;
+    --prox-border:  #C3FDE8;
+  }
+}
