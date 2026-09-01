@@ -50,8 +50,15 @@ Reach for these before inventing something new.
 | `.section-head--split` | Big title left, supporting copy right. |
 | `.page-hero__grid` | Same idea for page heroes. |
 | `.facts` | Five-column parameter strip. Add `.facts--filled` for green cells with white values. |
-| `.framed` | Focus-frame brackets on an image. |
+| `.framed` | Focus-frame brackets on an image, cropped 4:3. Add `.framed--tall` for portrait sources (4:5) so heads do not get cropped off. |
 | `.card`, `.step` | The older filled containers. Still used on Portfolio and Insights. |
+
+The footer sits on `#0F1613` with a 3px green rule above it, so it separates from the
+green CTA most pages close on. Its links use `#42CFA6`, the tint the brand specifies
+for dark grounds.
+
+House style: **no em dashes in sentence copy.** Use a comma, a colon, or a second
+sentence. The only remaining em dashes are the ` — ` separators in `<title>` tags.
 
 On green and photo bands, blue accents invert to `#C3FDE8`. Blue on green fails
 contrast badly, so do not force it back.
@@ -61,7 +68,7 @@ contrast badly, so do not force it back.
 From the Thesis Changes section of the pivot doc:
 
 - **Business size** — adjusted EBITDA of $1M–$5M
-- **Check size** — $500K–$1.1M, capped at 10% of the fund
+- **Check size** — $500K–$2.5M
 - **Position** — minority, non-control equity of 5%–20%
 - **Geography** — US based, lower 48
 - **Industry** — agnostic
@@ -78,12 +85,13 @@ Search for `$1M` and `$500K` if you change them.
 | `whiteboard.jpg` | About, Our Story |
 | `built-by-operators.jpg` | About photoband — IMG_0081 from the Aug 2025 shoot |
 | `deal-process.jpg` | Investors photoband — IMG_0284 from the Aug 2025 shoot |
+| `peggy-adam.jpg` | Insights |
 | `adam-headshot.jpg`, `peggy-headshot.jpg`, `eliza-headshot.jpg` | About, team |
 | ~~`one-pager.jpg`~~ | Removed — the printed one-pager shows the old self-funded thesis (SBA, search funds) and its print green is off-brand. Legible even under the photoband wash. |
 | `deal-notes.jpg` | For Sponsors photoband, Portfolio photoband |
 | `peggy-phone.jpg` | For Sponsors, Submit |
-| `adam-speaking.jpg` | Insights |
-| `adam-portrait.jpg`, `peggy-adam.jpg` | Spares — not currently placed |
+| `adam-speaking.jpg` | For Sponsors, How We Work (portrait, needs `.framed--tall`) |
+| `adam-portrait.jpg` | Spare — not currently placed |
 
 Three from the zip were left out: the Jenga shot (the mural clashes with the palette),
 the November panel shot (dark, red curtain), and the SMBash photo (it carries the
@@ -99,7 +107,7 @@ SMBootcamp brand, which the pivot doc says you are discontinuing).
    are not written. The `Read` links point to `#`.
 4. **Review Investors.** Drafted from your fund facts. Have counsel read the page and
    the disclaimer.
-5. **Team titles** are Managing Director for all three, confirmed. Adam's founder
+5. **Team titles**: Adam and Peggy are Managing Partner, Eliza is Managing Director. Adam's founder
    status is carried in the Our Story copy and in his bio, not in a title.
 6. **LinkedIn company URL.** The footer links to
    `linkedin.com/company/prox-search-capital/` — verify that is the right handle.

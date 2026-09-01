@@ -748,3 +748,27 @@ h2            { font-size: clamp(1.875rem, 3.4vw, 2.75rem); }
 .photoband .card h3,
 .photoband .card h4 { color: var(--prox-black); }
 .photoband .card p  { color: var(--prox-ink); }
+
+/* --- Portrait imagery ------------------------------------------------------
+   The default .framed crop is 4:3, which decapitates a portrait source.
+   Use --tall for anything shot vertically. */
+.framed--tall img { aspect-ratio: 4 / 5; }
+
+/* --- Footer, differentiated from the section above ------------------------
+   Several pages close on a green CTA, so a green footer ran straight into it.
+   #0F1613 is the dark ground from the brand's dark-mode note, and #42CFA6 is
+   the link tint it specifies for dark backgrounds. */
+.site-footer { background: #0F1613; border-top: 3px solid var(--prox-green); }
+.site-footer a { color: var(--prox-green-600); }
+.site-footer a:hover { color: var(--prox-green-800); }
+.site-footer__tagline { color: #fff; }
+.site-footer__top { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--prox-6); }
+.site-footer h4 { color: var(--prox-green-600); }
+.site-footer__bottom { border-top-color: rgba(255,255,255,0.16); color: #8E9A96; }
+
+@media (max-width: 1000px) {
+  .site-footer__top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .site-footer__top { grid-template-columns: 1fr; gap: var(--prox-6); }
+}
