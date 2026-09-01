@@ -69,10 +69,10 @@ From the Thesis Changes section of the pivot doc:
 
 - **Business size** — adjusted EBITDA of $1M–$5M
 - **Check size** — $500K–$2.5M
-- **Position** — minority, non-control equity of 5%–20%
+- **Position** — minority, non-control equity (the 5%–20% range is deliberately not published)
 - **Geography** — US based, lower 48
 - **Industry** — agnostic
-- **No SBA**
+- **No SBA** — still a real filter, but deliberately not stated publicly
 
 Search for `$1M` and `$500K` if you change them.
 
