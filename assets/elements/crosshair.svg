@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" role="img" aria-label="PROX selection cursor">
+  <!-- Prox Search Capital selection cursor / crosshair. Open centre, equal arms. -->
+  <g stroke="#0B6756" stroke-width="3" stroke-linecap="butt">
+    <path d="M32 4 V24"/>
+    <path d="M32 40 V60"/>
+    <path d="M4 32 H24"/>
+    <path d="M40 32 H60"/>
+  </g>
+</svg>

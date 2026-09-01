@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" fill="none" role="img" aria-label="PROX focus frame">
+  <!-- Prox Search Capital focus frame. Corner brackets sit outside the image edge.
+       Stroke ~1/40 of the shorter side; arm ~1/6 of the shorter side. -->
+  <g stroke="#0B6756" stroke-width="6" stroke-linecap="butt">
+    <path d="M3 43 V3 H43"/>
+    <path d="M357 3 H397 V43"/>
+    <path d="M397 197 V237 H357"/>
+    <path d="M43 237 H3 V197"/>
+  </g>
+</svg>

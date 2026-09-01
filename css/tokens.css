@@ -1,0 +1,198 @@
+/* Prox Search Capital — design tokens
+   Derived from the Prox Search Capital Brand Guidelines, Feb 2025.
+   Import this rather than retyping values. */
+
+:root {
+  /* ---- Primary palette ---- */
+  --prox-green:        #0B6756;   /* primary */
+  --prox-black:        #000000;
+  --prox-gray:         #F2F3F3;   /* light gray surface */
+  --prox-white:        #FFFFFF;
+  --prox-blue:         #087CC1;   /* accent only — ties to Prox Capital Group */
+
+  /* ---- Extended tint ramp, dark to light ---- */
+  --prox-green-100:    #0b6756;
+  --prox-green-200:    #0E7A65;
+  --prox-green-300:    #10906F;
+  --prox-green-400:    #14A47D;
+  --prox-green-500:    #23B890;
+  --prox-green-600:    #42CFA6;
+  --prox-green-700:    #5DD6B1;
+  --prox-green-800:    #76E0BF;
+  --prox-green-900:    #8FEACC;
+  --prox-green-1000:   #A9F4DA;
+  --prox-green-1100:   #C3FDE8;
+
+  /* ---- Neutrals (not in the guide; needed for UI and charts) ---- */
+  --prox-ink:          #101614;   /* body text, softer than pure black on screen */
+  --prox-muted:        #5B6770;   /* captions, axis labels */
+  --prox-neutral:      #B9C2C7;   /* "other" / unhighlighted chart series */
+  --prox-rule:         #E8EAEA;   /* hairlines, gridlines */
+
+  /* ---- Semantic ---- */
+  --prox-bg:           var(--prox-white);
+  --prox-surface:      var(--prox-gray);
+  --prox-border:       var(--prox-green-1100);
+  --prox-link:         var(--prox-green);
+  --prox-focus-ring:   var(--prox-blue);
+
+  /* ---- Typography ---- */
+  --prox-font-head: Urbanist, Poppins, "Century Gothic", "Avenir Next", Montserrat, sans-serif;
+  --prox-font-body: "Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --prox-w-regular:  400;
+  --prox-w-medium:   500;
+  --prox-w-semibold: 600;
+
+  --prox-track-caps: 0.05em;   /* pre-titles and CTAs: guide tracking +50 */
+  --prox-track-body: 0;
+
+  --prox-size-display:   3.5rem;
+  --prox-size-h1:        2.25rem;
+  --prox-size-h2:        1.5rem;
+  --prox-size-h3:        1.125rem;
+  --prox-size-body:      1rem;
+  --prox-size-caption:   0.8125rem;
+  --prox-size-pretitle:  0.75rem;
+
+  --prox-lh-head: 1.15;
+  --prox-lh-body: 1.5;
+  --prox-measure: 68ch;
+
+  /* ---- Spacing (4px base) ---- */
+  --prox-1: 4px;   --prox-2: 8px;   --prox-3: 12px;  --prox-4: 16px;
+  --prox-5: 24px;  --prox-6: 32px;  --prox-7: 48px;  --prox-8: 64px;
+  --prox-9: 96px;  --prox-10: 128px;
+
+  /* ---- Shape ---- */
+  --prox-radius:    4px;
+  --prox-radius-sm: 2px;
+  --prox-maxw:      1140px;
+
+  /* ---- Signature gradient ---- */
+  --prox-gradient: radial-gradient(circle at 0% 0%,
+    rgba(11,103,86,0.18) 0%, rgba(11,103,86,0) 55%);
+
+  /* ---- Chart palettes ---- */
+  --prox-cat-1: #0B6756;
+  --prox-cat-2: #087CC1;
+  --prox-cat-3: #23B890;
+  --prox-cat-4: #8FEACC;   /* fills only — too light for thin lines */
+  --prox-cat-neutral: #B9C2C7;
+  /* Sequential, light to dark:
+     #C3FDE8  #8FEACC  #42CFA6  #14A47D  #0B6756 */
+}
+
+/* Dark mode is not defined in the guide. These are sensible defaults:
+   green moves up the ramp because #0B6756 fails contrast on a dark ground. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --prox-bg:      #0F1613;
+    --prox-surface: #18211E;
+    --prox-ink:     #E8EAEA;
+    --prox-rule:    #24312D;
+    --prox-link:    var(--prox-green-600);
+    --prox-border:  #24312D;
+  }
+}
+
+/* ---- Base ---- */
+body {
+  background: var(--prox-bg);
+  color: var(--prox-ink);
+  font-family: var(--prox-font-body);
+  font-size: var(--prox-size-body);
+  line-height: var(--prox-lh-body);
+}
+
+h1, h2, h3, h4, .prox-display {
+  font-family: var(--prox-font-head);
+  line-height: var(--prox-lh-head);
+  letter-spacing: var(--prox-track-body);
+  color: var(--prox-ink);
+}
+.prox-display { font-size: var(--prox-size-display); font-weight: var(--prox-w-semibold); }
+h1 { font-size: var(--prox-size-h1); font-weight: var(--prox-w-semibold); }
+h2 { font-size: var(--prox-size-h2); font-weight: var(--prox-w-medium); }
+h3 { font-size: var(--prox-size-h3); font-weight: var(--prox-w-medium); }
+
+.prox-pretitle {
+  font-family: var(--prox-font-head);
+  font-weight: var(--prox-w-medium);
+  font-size: var(--prox-size-pretitle);
+  letter-spacing: var(--prox-track-caps);
+  text-transform: uppercase;
+  color: var(--prox-green);
+}
+
+/* Mid-sentence emphasis, as used throughout the guide's own spreads */
+.prox-em { color: var(--prox-green); }
+
+/* Values-card treatment (guide p.6) — the default container */
+.prox-card {
+  background: var(--prox-surface);
+  border-left: 3px solid var(--prox-green);
+  padding: var(--prox-5);
+  border-radius: 0 var(--prox-radius) var(--prox-radius) 0;
+}
+
+/* Dashed-bracket section marker (guide: MISSION, VISION, VALUES) */
+.prox-marker {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1.5px dashed var(--prox-green);
+  font-family: var(--prox-font-head);
+  font-weight: var(--prox-w-medium);
+  font-size: var(--prox-size-pretitle);
+  letter-spacing: var(--prox-track-caps);
+  text-transform: uppercase;
+}
+
+/* Inverse variants — for use on a #0B6756 field or dark photography */
+.prox-marker--inverse { border-color: var(--prox-white); color: var(--prox-white); }
+.prox-card--inverse {
+  background: rgba(255,255,255,0.08);
+  border-left-color: var(--prox-green-1100);
+  color: var(--prox-white);
+}
+.prox-btn--inverse {
+  background: var(--prox-white);
+  border-color: var(--prox-white);
+  color: var(--prox-green);
+}
+.prox-btn--inverse:hover  { background: var(--prox-green-1100); border-color: var(--prox-green-1100); }
+.prox-btn--inverse:active { background: var(--prox-green-1000); border-color: var(--prox-green-1000); }
+.prox-em--inverse { color: var(--prox-green-1100); }
+
+/* Focus frame — wrap an <img>. Uses two pseudo-elements per wrapper,
+   so nest .prox-frame > .prox-frame-alt for all four corners, or use
+   assets/elements/focus-frame.svg as a background image. */
+.prox-frame { position: relative; display: inline-block; }
+.prox-frame::before, .prox-frame::after {
+  content: ""; position: absolute; width: 32px; height: 32px;
+  border: 4px solid var(--prox-green);
+}
+.prox-frame::before { top: -12px; left: -12px; border-right: 0; border-bottom: 0; }
+.prox-frame::after { bottom: -12px; right: -12px; border-left: 0; border-top: 0; }
+
+/* Buttons */
+.prox-btn {
+  font-family: var(--prox-font-head);
+  font-weight: var(--prox-w-medium);
+  letter-spacing: var(--prox-track-caps);
+  text-transform: uppercase;
+  padding: var(--prox-3) var(--prox-5);
+  border-radius: var(--prox-radius);
+  border: 1.5px solid var(--prox-green);
+  background: var(--prox-green);
+  color: var(--prox-white);
+  cursor: pointer;
+}
+.prox-btn:hover  { background: var(--prox-green-200); border-color: var(--prox-green-200); }
+.prox-btn:active { background: var(--prox-green-300); border-color: var(--prox-green-300); }
+.prox-btn--secondary { background: transparent; color: var(--prox-green); }
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--prox-focus-ring);
+  outline-offset: 2px;
+}

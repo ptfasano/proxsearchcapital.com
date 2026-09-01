@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit a Deal — Prox Search Capital</title>
+<meta name="description" content="Send us the opportunity. We will tell you quickly whether it is a fit.">
+<link rel="icon" href="assets/logos/prox-brandmark-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-header__logo" href="index.html" aria-label="Prox Search Capital — home">
+      <img src="assets/logos/prox-primary-color.png" alt="Prox Search Capital" width="590" height="222">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-sponsors.html">For Sponsors</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="investors.html">Investors</a></li>
+          <li class="nav-mobile-only"><a href="submit.html">Submit a Deal</a></li>
+          <li class="nav-mobile-only"><a href="https://valence.vectorais.com/login">Investor Portal</a></li>      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <a class="btn btn--bracket" href="https://valence.vectorais.com/login">Investor Portal</a>
+      <a class="btn btn--primary" href="submit.html">Submit a Deal</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===== Page hero ===== -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="page-hero__grid">
+        <div>
+      <span class="marker">Submit a Deal</span>
+      <h1>Send us the opportunity.</h1>
+        </div>
+        <div>
+      <p class="lead">Tell us what you have. We will read it, come back with real questions, and give you a straight answer on whether we are interested. If it is not a fit, we will say so quickly and tell you why.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== What happens next ===== -->
+  <section class="section section--tight section--gray">
+    <div class="wrap">
+      <span class="marker">What Happens Next</span>
+      <ol class="process process--3">
+        <li class="process__step">
+          <div class="process__node">01</div>
+          <h4>You send it over</h4>
+          <p>A teaser, a model, and the proposed structure are enough to start.</p>
+        </li>
+        <li class="process__step">
+          <div class="process__node">02</div>
+          <h4>We read it and respond</h4>
+          <p>A partner reviews it and comes back to you, usually within a few business days.</p>
+        </li>
+        <li class="process__step">
+          <div class="process__node process__node--final">03</div>
+          <h4>We tell you where we stand</h4>
+          <p>Interested and here is what we need, or not a fit and here is why. No long silence either way.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Form ===== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="editor-note" style="margin-bottom:var(--prox-6)">
+            <strong>Needs wiring</strong>
+            This form posts nowhere yet. Point the <code>action</code> attribute at your form handler (or rebuild it in your WordPress form plugin) and add spam protection before going live.
+          </div>
+
+          <form class="form" method="post" action="#" novalidate>
+            <div class="field">
+              <label for="name">First and last name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+
+            <div class="field">
+              <label for="firm">Firm or sponsor name</label>
+              <input type="text" id="firm" name="firm" autocomplete="organization">
+            </div>
+
+            <div class="field">
+              <label for="role">Your role</label>
+              <select id="role" name="role">
+                <option value="">Select one</option>
+                <option>Independent sponsor</option>
+                <option>Acquisition entrepreneur</option>
+                <option>Operator</option>
+                <option>Intermediary or advisor</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="industry">Industry</label>
+              <input type="text" id="industry" name="industry" placeholder="e.g. commercial landscaping">
+            </div>
+
+            <div class="field">
+              <label for="ebitda">Adjusted EBITDA</label>
+              <input type="text" id="ebitda" name="ebitda" placeholder="e.g. $3.2M TTM">
+            </div>
+
+            <div class="field">
+              <label for="equity">Equity you are looking to raise</label>
+              <input type="text" id="equity" name="equity" placeholder="e.g. $900K">
+            </div>
+
+            <div class="field">
+              <label for="stage">Where you are in the process</label>
+              <select id="stage" name="stage">
+                <option value="">Select one</option>
+                <option>Early look, no LOI</option>
+                <option>LOI submitted</option>
+                <option>LOI signed, in diligence</option>
+                <option>Diligence complete, working toward close</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="details">Tell us about the deal <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="details" name="details" required placeholder="The business, the seller's reason for exiting, the proposed structure, who is operating it after close, and your timeline."></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Submit</button>
+            <p class="hint" style="margin-top:var(--prox-4)">Prefer email? Send it to <a href="mailto:info@proxcapitalgroup.com">info@proxcapitalgroup.com</a>.</p>
+          </form>
+        </div>
+
+        <div>
+          <div class="callout">
+            <span class="marker">Before you send</span>
+            <p>We invest $500K to $1.1M for a minority position of 5% to 20% in US businesses with $1M to $5M of adjusted EBITDA. We do not do SBA deals.</p>
+          </div>
+
+          <h3 style="margin-top:var(--prox-7); margin-bottom:var(--prox-4)">Helpful to include</h3>
+          <ul class="rule-list">
+            <li>Three years of financials and a normalized EBITDA bridge</li>
+            <li>Purchase price and the full proposed capital structure</li>
+            <li>Your background and your role after close</li>
+            <li>The operator, if that is someone other than you</li>
+            <li>Customer concentration</li>
+            <li>Your timeline to close</li>
+          </ul>
+
+          <p style="margin-top:var(--prox-6)"><a class="cta-text" href="for-sponsors.html#what-we-invest-in">What we invest in</a></p>
+
+          <div class="framed" style="margin-top:var(--prox-8)">
+            <img src="assets/img/peggy-phone.jpg" alt="Peggy Fasano taking a call with a sponsor" width="1800" height="1200" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div>
+        <div class="site-footer__logo">
+          <img src="assets/logos/prox-stacked-white.png" alt="Prox Search Capital" width="628" height="304">
+        </div>
+        <p class="site-footer__tagline">Capital that gets it.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="for-sponsors.html">For Sponsors</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="investors.html">Investors</a></li>        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="submit.html">Submit a Deal</a></li>
+          <li><a href="https://valence.vectorais.com/login">Investor Portal</a></li>
+          <li><a href="mailto:info@proxcapitalgroup.com">info@proxcapitalgroup.com</a></li>
+          <li><a href="https://www.linkedin.com/company/prox-search-capital/">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; 2026 Prox Search Capital.</span>
+      <span><a href="privacy-policy.html">Privacy Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
