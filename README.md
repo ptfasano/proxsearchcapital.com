@@ -97,8 +97,8 @@ Search for `$1M` and `$500K` if you change them.
 | `adam-headshot.jpg`, `peggy-headshot.jpg`, `eliza-headshot.jpg` | About, team |
 | ~~`one-pager.jpg`~~ | Removed — the printed one-pager shows the old self-funded thesis (SBA, search funds) and its print green is off-brand. Legible even under the photoband wash. |
 | `deal-notes.jpg` | For Sponsors photoband, Portfolio photoband |
-| `peggy-phone.jpg` | For Sponsors, Submit |
-| `adam-speaking.jpg` | For Sponsors, How We Work (portrait, needs `.framed--tall`) |
+| `peggy-phone.jpg` | For Sponsors, After the Close (16:9, needs `.framed--wide`) |
+| `adam-speaking.jpg` | For Sponsors, How We Work (square, needs `.framed--square`) |
 | `adam-portrait.jpg` | Spare — not currently placed |
 
 Three from the zip were left out: the Jenga shot (the mural clashes with the palette),

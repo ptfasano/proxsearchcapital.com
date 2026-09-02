@@ -217,7 +217,7 @@ strong { font-weight: 600; }
 /* --- Focus frame on imagery ---------------------------------------------- */
 .framed { position: relative; display: block; }
 .framed img { border-radius: 2px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.framed--wide img { aspect-ratio: 3 / 2; }
+.framed--wide img { aspect-ratio: 16 / 9; }
 .framed::before, .framed::after {
   content: ''; position: absolute; width: 40px; height: 40px;
   border: 4px solid var(--prox-green); pointer-events: none;
@@ -747,10 +747,12 @@ h2            { font-size: clamp(1.875rem, 3.4vw, 2.75rem); }
 .photoband .card h4 { color: var(--prox-black); }
 .photoband .card p  { color: var(--prox-ink); }
 
-/* --- Portrait imagery ------------------------------------------------------
-   The default .framed crop is 4:3, which decapitates a portrait source.
-   Use --tall for anything shot vertically. */
-.framed--tall img { aspect-ratio: 4 / 5; }
+/* --- Framed image ratios ---------------------------------------------------
+   Match the box to the file so object-fit crops nothing. The default .framed
+   is 4:3; --square and --wide exist for sources already cropped to those
+   ratios upstream. Changing a source ratio means changing its modifier too,
+   otherwise the container silently re-crops the crop. */
+.framed--square img { aspect-ratio: 1 / 1; }
 
 /* --- Footer, differentiated from the section above ------------------------
    Several pages close on a green CTA, so a green footer ran straight into it.
