@@ -812,3 +812,12 @@ body { background: #fff; }
   .site-footer__top > div:first-child,
   .site-footer__news { grid-column: auto; }
 }
+
+/* The beehiiv iframe carries its own top padding, so the form's heading sat
+   lower than the Explore and Connect labels beside it. Pull the embed up to
+   line the cap-heights up. Only above the stacking breakpoint, since below it
+   the newsletter sits on its own row with nothing to align to. Tune the nudge
+   if beehiiv changes the form's internal padding. */
+@media (min-width: 1101px) {
+  .beehiiv-embed { margin-top: -23px; }
+}
