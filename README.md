@@ -160,3 +160,25 @@ rather than inheriting the source file's own margin.
   a dark green mark on black.
 
 Regenerate with `favicon.ps1` and `makeico.ps1` if the source mark changes.
+
+## Footer newsletter
+
+The right-hand footer column embeds a beehiiv subscribe form:
+
+```
+<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+        data-beehiiv-form="9998e3a9-7fa9-4e20-96c9-e28aa555a56b"></script>
+```
+
+The loader injects a cross-origin iframe, so **the form's interior is styled in
+the beehiiv dashboard, not in `site.css`**. Its title, description, colours,
+and alignment all come from there. Two things worth adjusting on beehiiv's side:
+
+- The form paints its own near-black background, which reads as a panel against
+  the footer's `#0F1613` rather than sitting flush. Setting it transparent or to
+  `#0F1613` would blend it.
+- Its text is centred while the rest of the footer is left aligned.
+
+The three link columns were narrowed to make room. `site.css` owns only the
+column widths and the responsive stacking (5 columns, then 6 with the brand and
+form on the top row, then 2 on phones).

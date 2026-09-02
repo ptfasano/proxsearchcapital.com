@@ -798,3 +798,32 @@ body { background: #fff; }
     --prox-border:  #C3FDE8;
   }
 }
+
+/* --- Footer newsletter column ---------------------------------------------
+   The three link columns are narrow by design (two short links each), so they
+   compress to make room for the beehiiv embed on the right. The embed renders
+   in a third-party iframe, so its interior is styled in the beehiiv dashboard,
+   not here. All this owns is the slot and the copy above it. */
+.site-footer__top { grid-template-columns: 1.25fr .72fr .72fr .82fr 1.75fr; gap: var(--prox-6); }
+
+.beehiiv-embed { min-height: 76px; }
+/* The loader injects an iframe; keep it from overflowing the column. */
+.beehiiv-embed iframe { max-width: 100% !important; }
+
+@media (max-width: 1180px) {
+  /* Brand + newsletter on the top row, the three link columns beneath. */
+  .site-footer__top { grid-template-columns: repeat(6, 1fr); }
+  .site-footer__top > div:first-child { grid-column: span 3; }
+  .site-footer__news { grid-column: span 3; }
+  .site-footer__top > div:nth-child(2),
+  .site-footer__top > div:nth-child(3),
+  .site-footer__top > div:nth-child(4) { grid-column: span 2; }
+}
+@media (max-width: 760px) {
+  .site-footer__top { grid-template-columns: repeat(2, 1fr); }
+  .site-footer__top > div:first-child { grid-column: span 2; }
+  .site-footer__news { grid-column: span 2; }
+  .site-footer__top > div:nth-child(2),
+  .site-footer__top > div:nth-child(3),
+  .site-footer__top > div:nth-child(4) { grid-column: span 1; }
+}
