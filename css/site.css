@@ -396,7 +396,7 @@ strong { font-weight: 600; }
 /* --- Footer --------------------------------------------------------------- */
 .site-footer { background: var(--prox-green); color: #fff; padding-block: var(--prox-8) var(--prox-6); }
 .site-footer a { color: var(--prox-green-1100); }
-.site-footer__top { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: var(--prox-7); }
+.site-footer__top { display: grid; }  /* columns and gap set in the Footer layout block below */
 .site-footer__logo img { height: 76px; width: auto; margin-bottom: var(--prox-5); }
 .site-footer h4 {
   color: #fff;
@@ -439,7 +439,6 @@ strong { font-weight: 600; }
   .facts > div { padding-right: var(--prox-4); }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .site-footer__top { grid-template-columns: 1fr 1fr; }
 
   /* Mobile nav */
   .nav-toggle { display: block; }
@@ -465,7 +464,6 @@ strong { font-weight: 600; }
   .split, .split--wide-left, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .split { gap: var(--prox-7); }
   .facts { grid-template-columns: 1fr; }
-  .site-footer__top { grid-template-columns: 1fr; gap: var(--prox-6); }
   .framed::before, .framed::after { width: 28px; height: 28px; border-width: 3px; }
   .framed::before { top: -10px; left: -10px; }
   .framed::after { bottom: -10px; right: -10px; }
@@ -762,16 +760,8 @@ h2            { font-size: clamp(1.875rem, 3.4vw, 2.75rem); }
 .site-footer a { color: var(--prox-green-600); }
 .site-footer a:hover { color: var(--prox-green-800); }
 .site-footer__tagline { color: #fff; }
-.site-footer__top { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--prox-6); }
 .site-footer h4 { color: var(--prox-green-600); }
 .site-footer__bottom { border-top-color: rgba(255,255,255,0.16); color: #8E9A96; }
-
-@media (max-width: 1000px) {
-  .site-footer__top { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 640px) {
-  .site-footer__top { grid-template-columns: 1fr; gap: var(--prox-6); }
-}
 
 /* --- Opt out of forced dark mode -------------------------------------------
    Chrome on Android (Auto Dark Theme) and some in-app browsers invert pages
@@ -799,31 +789,26 @@ body { background: #fff; }
   }
 }
 
-/* --- Footer newsletter column ---------------------------------------------
-   The three link columns are narrow by design (two short links each), so they
-   compress to make room for the beehiiv embed on the right. The embed renders
-   in a third-party iframe, so its interior is styled in the beehiiv dashboard,
-   not here. All this owns is the slot and the copy above it. */
-.site-footer__top { grid-template-columns: 1.25fr .72fr .72fr .82fr 1.75fr; gap: var(--prox-6); }
+/* --- Footer layout ---------------------------------------------------------
+   Four slots: brand, Explore, Connect, newsletter. Two link columns rather
+   than three, kept deliberately narrow so the beehiiv embed gets real width.
+   At five columns the embed had roughly 180px and its email field wrapped
+   under the button. The embed renders in a third-party iframe, so its
+   interior is styled in the beehiiv dashboard, not here. */
+.site-footer__top { grid-template-columns: 1.1fr .75fr .75fr 2.1fr; gap: var(--prox-6); }
 
 .beehiiv-embed { min-height: 76px; }
 /* The loader injects an iframe; keep it from overflowing the column. */
 .beehiiv-embed iframe { max-width: 100% !important; }
 
-@media (max-width: 1180px) {
-  /* Brand + newsletter on the top row, the three link columns beneath. */
-  .site-footer__top { grid-template-columns: repeat(6, 1fr); }
-  .site-footer__top > div:first-child { grid-column: span 3; }
-  .site-footer__news { grid-column: span 3; }
-  .site-footer__top > div:nth-child(2),
-  .site-footer__top > div:nth-child(3),
-  .site-footer__top > div:nth-child(4) { grid-column: span 2; }
+@media (max-width: 1100px) {
+  /* Brand across the top, the two link columns side by side, newsletter full width. */
+  .site-footer__top { grid-template-columns: 1fr 1fr; }
+  .site-footer__top > div:first-child { grid-column: 1 / -1; }
+  .site-footer__news { grid-column: 1 / -1; }
 }
-@media (max-width: 760px) {
-  .site-footer__top { grid-template-columns: repeat(2, 1fr); }
-  .site-footer__top > div:first-child { grid-column: span 2; }
-  .site-footer__news { grid-column: span 2; }
-  .site-footer__top > div:nth-child(2),
-  .site-footer__top > div:nth-child(3),
-  .site-footer__top > div:nth-child(4) { grid-column: span 1; }
+@media (max-width: 640px) {
+  .site-footer__top { grid-template-columns: 1fr; }
+  .site-footer__top > div:first-child,
+  .site-footer__news { grid-column: auto; }
 }
