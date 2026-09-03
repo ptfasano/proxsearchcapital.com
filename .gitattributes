@@ -1,0 +1,3 @@
+# Netlify reads this file line by line; CRLF can break the parser.
+_headers text eol=lf
+_redirects text eol=lf
